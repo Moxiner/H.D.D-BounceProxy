@@ -2,33 +2,10 @@ import cv2
 import numpy as np
 import pyautogui
 from PIL import ImageGrab
-import time
-import pydirectinput
-
-import vgamepad
-
-gamepad = vgamepad.VX360Gamepad()
-# 定义所有的XBox360游戏手柄按键
-UP = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_UP
-DOWN = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN
-LEFT = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT
-RIGHT = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT
-
-START = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_START
-BACK = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_BACK
-GUIDE = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_GUIDE
-
-LEFT_THUMB = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_LEFT_THUMB
-RIGHT_THUMB = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_RIGHT_THUMB
-LEFT_SHOULDER = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_LEFT_SHOULDER
-RIGHT_SHOULDER = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_RIGHT_SHOULDER
-
-A = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_A
-B = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_B
-X = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_X
-Y = vgamepad.XUSB_BUTTON.XUSB_GAMEPAD_Y
+from keyboad import *
 from loguru import logger
 import sys
+import threading
 
 # 创建一个事件对象，用于控制线程的运行和重启
 
@@ -59,7 +36,7 @@ class GetImgContours:
         return rectangle_info
 
 
-def evasion():
+def evasion(evasion, bounce, operationmode, intone):
     time.sleep(0.02)
     width, height = pyautogui.size()
     # 传入自定义的光效颜色范围参数，为黄色
@@ -77,23 +54,28 @@ def evasion():
     w_h_list_red = contours_red.get_rectangle(contours_red.get_contours())
 
     if any(w > 300 and h <= 20 or w <= 20 and h > 300 for w, h in w_h_list_yellow):
-        pydirectinput.press("space")
-        gamepad.press_button(RIGHT_SHOULDER)
-        gamepad.update()
-        time.sleep(0.2)
-        gamepad.release_button(RIGHT_SHOULDER)
-        gamepad.update()
-        logger.info("\033[34mH.D.D代理操作 - 格挡反击\033[0m")
+        logger.info("\033[34mH.D.D 代理视觉触发 - 极限支援\033[0m")
+        if int(operationmode) == 0:
+            thread_keyboard = threading.Thread(
+                target=keyboad, args=(int(evasion), 0, 1)
+            )
+            thread_joypad = threading.Thread(target=keyboad, args=(int(evasion), 0, 2))
+            thread_keyboard.start()
+            thread_joypad.start()
+        else:
+            keyboad(int(evasion), 0, int(operationmode))
+
         time.sleep(0.5)
 
     elif any(w > 300 and h <= 20 or w <= 20 and h > 300 for w, h in w_h_list_red):
-        pydirectinput.press("shift")
-        gamepad.press_button(A)
-        gamepad.update()
-        time.sleep(0.2)
-        gamepad.release_button(A)
-        gamepad.update()
-        logger.info("\033[34mH.D.D代理操作 - 极限闪避\033[0m")
+        logger.info("\033[34mH.D.D 代理视觉触发 - 极限闪避\033[0m")
+        if int(operationmode) == 0:
+            thread_keyboard = threading.Thread(target=keyboad, args=(int(bounce), 1, 1))
+            thread_joypad = threading.Thread(target=keyboad, args=(int(bounce), 1, 2))
+            thread_keyboard.start()
+            thread_joypad.start()
+        else:
+            keyboad(int(bounce), 1, int(operationmode))
 
         time.sleep(0.5)
 

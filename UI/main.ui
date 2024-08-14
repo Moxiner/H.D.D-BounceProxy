@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form {
+	background-image: url(./Image/bg.png);         
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="verticalFrame">
+     <layout class="QVBoxLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="leftMargin">
+       <number>30</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="startTitle_QLabel">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+          <pointsize>16</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>欢迎使用 H.D.D 闪避代理系统</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="verticalFrame_2">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:pressed {
+    background-color: #a6c100;
+    color: black;
+    border: 5px solid #a6c100;
+	border-radius: 14px;
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMinimumSize</enum>
+      </property>
+      <property name="leftMargin">
+       <number>30</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="start_pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid  #a6c100;
+    border-radius: 14px;
+}
+
+QPushButton:pressed {
+    background-color: #a6c100;
+    color: black;
+    border: 5px solid #a6c100;
+	border-radius: 14px;
+}</string>
+        </property>
+        <property name="text">
+         <string>开启代理</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stop_pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid  #f48322;
+    border-radius: 14px;
+}
+
+QPushButton:pressed {
+    background-color: #f48322;
+    color: black;
+    border: 5px solid #f48322;
+	border-radius: 14px;
+}</string>
+        </property>
+        <property name="text">
+         <string>停止代理</string>
+        </property>
+        <property name="hidden" stdset="0">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="setting_pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid  #0078d4;
+    border-radius: 14px;
+}
+
+QPushButton:pressed {
+    background-color: #0078d4;
+    color: black;
+    border: 5px solid #0078d4;
+	border-radius: 14px;
+}</string>
+        </property>
+        <property name="text">
+         <string>系统设置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="about_pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid  #ffdb29;
+    border-radius: 14px;
+}
+
+QPushButton:pressed {
+    background-color: #ffdb29;
+    color: black;
+    border: 5px solid #ffdb29;
+	border-radius: 14px;
+}</string>
+        </property>
+        <property name="text">
+         <string>关于系统</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exit_pushButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>印品鸿蒙体（非商用）</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid #262626;
+    border-radius: 14px;
+}
+QPushButton:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 2px solid  #aa0000;
+    border-radius: 14px;
+}
+
+QPushButton:pressed {
+    background-color: #aa0000;
+    color: black;
+    border: 5px solid #aa0000;
+	border-radius: 14px;
+}</string>
+        </property>
+        <property name="text">
+         <string>退出系统</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>50</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>start_pushButton</tabstop>
+  <tabstop>setting_pushButton</tabstop>
+  <tabstop>about_pushButton</tabstop>
+  <tabstop>exit_pushButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

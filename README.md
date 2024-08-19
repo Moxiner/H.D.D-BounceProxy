@@ -1,26 +1,27 @@
 # H.D.D-BounceProxy
  绝区零自动弹反系统
-
-
-# ZZZSoundTrigger
-Dodging Trigger for ZZZ based on waveframe
+ 
+![img](./Docs/title.png)
+## 特性
+* 支持视觉检测/音频检测
+* 自定义弹反招式
+* 支持键盘/手柄
+* 增加 GUI
 
 ## 使用
 
-下载：`git clone https://github.com/ImLaoBJie/ZZZSoundTrigger.git`
+下载：`git clone https://github.com/Moxiner/H.D.D-BounceProxy.git`
 
-环境安装：`pip install -r requirements.txt`
+环境安装：`./install.bat`
 
-运行, 管理员身份运行shell/cmd：`python Main.py`
+启动：`./run.bat`
 
-## 参数说明
-`SAMPLE_PATH`: 特征波形音乐文件位置
 
-`THRESHOLD`: 触发动作阈值，默认0.1
+# 致谢
+本项目引用以下开源项目，感谢他们对开源项目做出的贡献。
 
-`EXPANSION_RATIO`: 最大归一化交叉相关 (MAXIMUM NORMALIZED CROSS-CORRELATE) 的倍数，默认1.0
+视觉提供: [绝区零》自动招架，以及闪避实现方法，基于python](https://www.bilibili.com/video/BV1QUb6eYEA5/?share_source=copy_web&vd_source=cb6401bb53217ef7b31c26ec63b95347) - By: [西瓜加糖精](https://space.bilibili.com/321123985)
 
-~~`COM_NAME`: 单片机端口，可以忽略~~
+音频提供: [ZZZSoundTrigger](https://github.com/ImLaoBJie/ZZZSoundTrigger) - By: [ImLaoBJie](https://github.com/ImLaoBJie)
 
-## 原理说明
-演示视频：[Bilibili](https://www.bilibili.com/video/BV1MT421r73n/)
+GUI 提供: [H.D.D-System](https://github.com/PPicku/H.D.D-System) - By: [PPicku](https://github.com/PPicku)

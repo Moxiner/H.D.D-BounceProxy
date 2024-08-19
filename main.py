@@ -6,8 +6,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QApplication,
 )
-from PySide6.QtCore import Qt, QCoreApplication
-from PySide6.QtGui import QPixmap, QPainter, QFontDatabase, QFont
+from PySide6.QtGui import QPixmap, QPainter, QIcon
 import sys
 from UI import main_ui
 from UI import setting_ui
@@ -70,6 +69,8 @@ class About(QWidget):
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle(f"H.D.D 弹反代理 {VERSION}")
+        self.setWindowIcon(QIcon("./Image/Icon.ico"))
         self.initUI()
         self.initStart()
 

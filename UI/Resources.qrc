@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="font">
+    <file>black.ttf</file>
+  </qresource>
+</RCC>

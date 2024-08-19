@@ -7,7 +7,7 @@ from PySide6.QtWidgets import (
     QApplication,
 )
 from PySide6.QtCore import Qt, QCoreApplication
-from PySide6.QtGui import QPixmap, QPainter
+from PySide6.QtGui import QPixmap, QPainter, QFontDatabase, QFont
 import sys
 from UI import main_ui
 from UI import setting_ui
@@ -74,8 +74,8 @@ class MainWindow(QWidget):
         self.initStart()
 
     def initUI(self):
-        self.main_layout = QVBoxLayout(self)
 
+        self.main_layout = QVBoxLayout(self)
         # 创建 QStackedWidget
         self.stacked_widget = QStackedWidget()
         self.home = Home()
@@ -243,4 +243,8 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     logger.info("H.D.D 代理初始化完成...")
+    keyboard.on_press_key("f8", lambda _: window.start())
+    keyboard.on_press_key("f9", lambda _: window.stop())
+    # keyboard.wait()  # 等待键盘事件，使程序持续运行
+    # 应用字体到应用程序
     sys.exit(app.exec())

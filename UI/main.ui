@@ -28,7 +28,8 @@
   <property name="styleSheet">
    <string notr="true">#Form {
 	background-image: url(./Image/bg.png);         
-}</string>
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -133,7 +134,7 @@ QPushButton:pressed {
 }</string>
         </property>
         <property name="text">
-         <string>开启代理</string>
+         <string>开启代理（F8）</string>
         </property>
        </widget>
       </item>
@@ -178,7 +179,7 @@ QPushButton:pressed {
 }</string>
         </property>
         <property name="text">
-         <string>停止代理</string>
+         <string>停止代理（F9）</string>
         </property>
         <property name="hidden" stdset="0">
          <bool>true</bool>

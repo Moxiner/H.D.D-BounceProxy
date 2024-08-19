@@ -28,7 +28,8 @@ class Ui_Form(object):
         Form.setMaximumSize(QSize(700, 600))
         Form.setStyleSheet(u"#Form {\n"
 "	background-image: url(./Image/bg.png);         \n"
-"}")
+"}\n"
+"")
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalFrame = QFrame(Form)
@@ -231,8 +232,8 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.startTitle_QLabel.setText(QCoreApplication.translate("Form", u"\u6b22\u8fce\u4f7f\u7528 H.D.D \u95ea\u907f\u4ee3\u7406\u7cfb\u7edf", None))
-        self.start_pushButton.setText(QCoreApplication.translate("Form", u"\u5f00\u542f\u4ee3\u7406", None))
-        self.stop_pushButton.setText(QCoreApplication.translate("Form", u"\u505c\u6b62\u4ee3\u7406", None))
+        self.start_pushButton.setText(QCoreApplication.translate("Form", u"\u5f00\u542f\u4ee3\u7406\uff08F8\uff09", None))
+        self.stop_pushButton.setText(QCoreApplication.translate("Form", u"\u505c\u6b62\u4ee3\u7406\uff08F9\uff09", None))
         self.setting_pushButton.setText(QCoreApplication.translate("Form", u"\u7cfb\u7edf\u8bbe\u7f6e", None))
         self.about_pushButton.setText(QCoreApplication.translate("Form", u"\u5173\u4e8e\u7cfb\u7edf", None))
         self.exit_pushButton.setText(QCoreApplication.translate("Form", u"\u9000\u51fa\u7cfb\u7edf", None))

@@ -3,7 +3,7 @@
 # Created by: The Resource Compiler for Qt version 6.6.3
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore
+from PySide6 import QtCore
 
 qt_resource_data = b"\
 \x00\x1d\xdc\x8c\

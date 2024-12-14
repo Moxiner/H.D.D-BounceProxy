@@ -1,8 +1,10 @@
 @echo off
-chcp 65001 >nul
+chcp 65001
 
 setlocal enabledelayedexpansion
 cd /d "%~dp0"
+python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip
+
 pip install -r requirements.txt -i  https://pypi.tuna.tsinghua.edu.cn/simples
 echo ================================
 echo  Requirements install Done.

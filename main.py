@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import (
+from PyQt5.QtWidgets import (
     QApplication,
     QMainWindow,
     QWidget,
@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QApplication,
 )
-from PySide6.QtGui import QPixmap, QPainter, QIcon
+from PyQt5.QtGui import QPixmap, QPainter, QIcon
 import sys
 from UI import main_ui
 from UI import setting_ui

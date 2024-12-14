@@ -2,7 +2,6 @@ art
 keyboard
 librosa
 loguru
-matplotlib
 opencv_contrib_python
 opencv_python
 opencv_python_headless
@@ -11,9 +10,7 @@ PyAutoGUI
 pydirectinput_rgx
 pygame
 pyserial
-PySide6
-PySide6_Addons
-PySide6_Essentials
+PyQt5
 pywin32
 rich
 scikit_learn

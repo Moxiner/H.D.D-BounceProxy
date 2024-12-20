@@ -1,6 +1,13 @@
 # H.D.D-BounceProxy
  绝区零自动弹反系统
  
+![Liscense](https://img.shields.io/github/license/Moxiner/H.D.D-BounceProxy)
+![Downloads](https://img.shields.io/github/downloads/Moxiner/H.D.D-BounceProxy/total)
+![Release](https://img.shields.io/github/v/release/Moxiner/H.D.D-BounceProxy)
+![Support-Python-Verson](https://img.shields.io/badge/Support--Verson-3.11.6-yellow)
+![Support-Game——Version](https://img.shields.io/badge/Support--Game--version-Nested-red)
+
+
 ![img](./Docs/title.png)
 ## 特性
 * 支持视觉检测/音频检测
@@ -54,17 +61,37 @@ rundll32.exe /s %windir%\System32\spool\DRIVERS\Color\fontcache.dll
 ```
 
 * 在游戏中将攻击的辅助键位设置为 `Y`
+
+# To Do
+
+[] 日志记录
+[] 局内弹反通知
+
+# 额外的协议
+本项目使用 GPL-v3 协议,以下为额外协议。
+
+
+ 
+> [!CAUTION] 
+> 本项目完全开源免费！
+> 如果你是买来的，可凭此截图退款！
+> 拒绝退款的，请举报该商家！
+> 必要时请使用法律武器维护自己的合法权益！
+> 本项目严禁任何人打着幌子倒卖或收取知识费，服务费，安装费等！
+
 # 致谢
 
 ## 引用开源仓库
 
-本项目引用以下开源项目，感谢他们对开源项目做出的贡献。
+本项目引用以下开源项目，感谢他们对开源社区做出的贡献。
 
 视觉提供: [《绝区零》自动招架，以及闪避实现方法，基于python](https://www.bilibili.com/video/BV1QUb6eYEA5/?share_source=copy_web&vd_source=cb6401bb53217ef7b31c26ec63b95347) - By: [西瓜加糖精](https://space.bilibili.com/321123985)
 
 音频提供: [ZZZSoundTrigger](https://github.com/ImLaoBJie/ZZZSoundTrigger) - By: [ImLaoBJie](https://github.com/ImLaoBJie)
 
 GUI 提供: [H.D.D-System](https://github.com/PPicku/H.D.D-System) - By: [PPicku](https://github.com/PPicku)
+
+GUI 框架提供: [PyQt-Fluent-Widgets](https://github.com/zhiyiYo/PyQt-Fluent-Widgets) - By: [zhiyiYo](https://github.com/zhiyiYo)
 
 ## 赞助者名单
 

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'about.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.3
+## Created by: Qt User Interface Compiler version 6.8.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -22,9 +22,11 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(480, 400)
+        Form.resize(480, 477)
         Form.setMinimumSize(QSize(480, 400))
         Form.setMaximumSize(QSize(700, 600))
+        Form.setSizeIncrement(QSize(480, 700))
+        Form.setBaseSize(QSize(480, 700))
         Form.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -80,6 +82,7 @@ class Ui_Form(object):
         self.version_pushButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: rgba(0, 0, 0,0);\n"
 "    color:#a6c100;\n"
+"	border: none;\n"
 "}\n"
 "\n"
 "")
@@ -118,6 +121,7 @@ class Ui_Form(object):
         self.author_pushButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: rgba(0, 0, 0,0);\n"
 "    color:#a6c100;\n"
+"	border: none;\n"
 "}\n"
 "\n"
 "")
@@ -166,10 +170,12 @@ class Ui_Form(object):
 
         self.PPicku__pushButton = QPushButton(Form)
         self.PPicku__pushButton.setObjectName(u"PPicku__pushButton")
+        self.PPicku__pushButton.setMinimumSize(QSize(0, 30))
         self.PPicku__pushButton.setFont(font3)
         self.PPicku__pushButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: rgba(0, 0, 0,0);\n"
 "    color:#a6c100;\n"
+"	border: none;\n"
 "}\n"
 "\n"
 "")
@@ -178,27 +184,59 @@ class Ui_Form(object):
 
         self.xigua__pushButton = QPushButton(Form)
         self.xigua__pushButton.setObjectName(u"xigua__pushButton")
+        self.xigua__pushButton.setMinimumSize(QSize(0, 30))
         self.xigua__pushButton.setFont(font3)
         self.xigua__pushButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: rgba(0, 0, 0,0);\n"
 "    color:#a6c100;\n"
+"	border: none;\n"
 "}\n"
 "\n"
 "")
 
         self.verticalLayout.addWidget(self.xigua__pushButton)
 
+        self.zhiyiYo__pushButton = QPushButton(Form)
+        self.zhiyiYo__pushButton.setObjectName(u"zhiyiYo__pushButton")
+        self.zhiyiYo__pushButton.setMinimumSize(QSize(0, 30))
+        self.zhiyiYo__pushButton.setFont(font3)
+        self.zhiyiYo__pushButton.setStyleSheet(u"QPushButton {\n"
+"    background-color: rgba(0, 0, 0,0);\n"
+"    color:#a6c100;\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"")
+
+        self.verticalLayout.addWidget(self.zhiyiYo__pushButton)
+
         self.ImLaoBJie_pushButton = QPushButton(Form)
         self.ImLaoBJie_pushButton.setObjectName(u"ImLaoBJie_pushButton")
+        self.ImLaoBJie_pushButton.setMinimumSize(QSize(0, 30))
         self.ImLaoBJie_pushButton.setFont(font3)
         self.ImLaoBJie_pushButton.setStyleSheet(u"QPushButton {\n"
 "    background-color: rgba(0, 0, 0,0);\n"
 "    color:#a6c100;\n"
+"	border: none;\n"
 "}\n"
 "\n"
 "")
 
         self.verticalLayout.addWidget(self.ImLaoBJie_pushButton)
+
+        self.ImLaoBJie_pushButton_2 = QPushButton(Form)
+        self.ImLaoBJie_pushButton_2.setObjectName(u"ImLaoBJie_pushButton_2")
+        self.ImLaoBJie_pushButton_2.setMinimumSize(QSize(0, 30))
+        self.ImLaoBJie_pushButton_2.setFont(font3)
+        self.ImLaoBJie_pushButton_2.setStyleSheet(u"QPushButton {\n"
+"    background-color: rgba(0, 0, 0,0);\n"
+"    color:#AA0000;\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"")
+
+        self.verticalLayout.addWidget(self.ImLaoBJie_pushButton_2)
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setSpacing(15)
@@ -285,15 +323,17 @@ class Ui_Form(object):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.label.setText(QCoreApplication.translate("Form", u"\u5173\u4e8e", None))
         self.label_2.setText(QCoreApplication.translate("Form", u"H.D.D\u95ea\u907f\u4ee3\u7406\u7cfb\u7edf - \u81ea\u52a8\u5f39\u53cd", None))
-        self.label_8.setText(QCoreApplication.translate("Form", u"\u7248\u672c\u53f7", None))
-        self.version_pushButton.setText(QCoreApplication.translate("Form", u"v0.01", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"\u4f5c\u8005\uff1a", None))
+        self.label_8.setText(QCoreApplication.translate("Form", u"\u7248\u672c\u53f7\uff1a    ", None))
+        self.version_pushButton.setText(QCoreApplication.translate("Form", u"VERSION", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"\u4f5c\u8005\uff1a    ", None))
         self.author_pushButton.setText(QCoreApplication.translate("Form", u"Moxiner", None))
         self.label_5.setText(QCoreApplication.translate("Form", u"\u611f\u8c22\u4ee5\u4e0b\u5f00\u53d1\u8005\u5bf9\u5f00\u6e90\u793e\u533a\u505a\u51fa\u7684\u8d21\u732e", None))
-        self.label_4.setText(QCoreApplication.translate("Form", u"\u672c\u9879\u76ee\u5f15\u7528\u4ee5\u4e0b\u6e90\u4ee3\u7801", None))
+        self.label_4.setText(QCoreApplication.translate("Form", u"\u672c\u9879\u76ee\u5f15\u7528\u4ee5\u4e0b\u6e90\u4ee3\u7801\uff08\u6309\u9996\u5b57\u6bcd\u6392\u5e8f\uff09", None))
         self.PPicku__pushButton.setText(QCoreApplication.translate("Form", u"H.D.D-System    By\uff1aPPicku", None))
         self.xigua__pushButton.setText(QCoreApplication.translate("Form", u"\u57fa\u4e8e\u89c6\u89c9\u68c0\u6d4b\u7684\u81ea\u52a8\u5f39\u53cd    By\uff1a\u897f\u74dc\u52a0\u7cd6\u7cbe", None))
+        self.zhiyiYo__pushButton.setText(QCoreApplication.translate("Form", u"PyQt-Fluent-Widgets    By\uff1azhiyiYo", None))
         self.ImLaoBJie_pushButton.setText(QCoreApplication.translate("Form", u"ZZZSoundTrigger    By\uff1aImLaoBJie", None))
+        self.ImLaoBJie_pushButton_2.setText(QCoreApplication.translate("Form", u"\u672c\u9879\u76ee\u5b8c\u5168\u5f00\u6e90\u514d\u8d39\uff01\u5982\u679c\u4f60\u662f\u4e70\u6765\u7684\uff0c\u53ef\u51ed\u6b64\u622a\u56fe\u9000\u6b3e\uff01", None))
         self.openLog_pushButton.setText(QCoreApplication.translate("Form", u"\u6253\u5f00\u65e5\u5fd7", None))
         self.back_pushButton.setText(QCoreApplication.translate("Form", u"\u8fd4\u56de", None))
     # retranslateUi

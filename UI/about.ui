@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>480</width>
-    <height>400</height>
+    <height>477</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -20,6 +20,18 @@
    <size>
     <width>700</width>
     <height>600</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>480</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>480</width>
+    <height>700</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -47,6 +59,7 @@
       <font>
        <family>印品鸿蒙体（非商用）</family>
        <pointsize>24</pointsize>
+       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
@@ -108,7 +121,7 @@
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
-        <string>版本号</string>
+        <string>版本号：    </string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -127,12 +140,13 @@
         <string notr="true">QPushButton {
     background-color: rgba(0, 0, 0,0);
     color:#a6c100;
+	border: none;
 }
 
 </string>
        </property>
        <property name="text">
-        <string>v0.01</string>
+        <string>VERSION</string>
        </property>
       </widget>
      </item>
@@ -179,7 +193,7 @@
           <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
-          <string>作者：</string>
+          <string>作者：    </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -198,6 +212,7 @@
           <string notr="true">QPushButton {
     background-color: rgba(0, 0, 0,0);
     color:#a6c100;
+	border: none;
 }
 
 </string>
@@ -286,7 +301,7 @@
       <string notr="true">color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>本项目引用以下源代码</string>
+      <string>本项目引用以下源代码（按首字母排序）</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -295,6 +310,12 @@
    </item>
    <item>
     <widget class="QPushButton" name="PPicku__pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <family>印品鸿蒙体（非商用）</family>
@@ -305,6 +326,7 @@
       <string notr="true">QPushButton {
     background-color: rgba(0, 0, 0,0);
     color:#a6c100;
+	border: none;
 }
 
 </string>
@@ -316,6 +338,12 @@
    </item>
    <item>
     <widget class="QPushButton" name="xigua__pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <family>印品鸿蒙体（非商用）</family>
@@ -326,6 +354,7 @@
       <string notr="true">QPushButton {
     background-color: rgba(0, 0, 0,0);
     color:#a6c100;
+	border: none;
 }
 
 </string>
@@ -336,7 +365,13 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="ImLaoBJie_pushButton">
+    <widget class="QPushButton" name="zhiyiYo__pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <family>印品鸿蒙体（非商用）</family>
@@ -347,12 +382,69 @@
       <string notr="true">QPushButton {
     background-color: rgba(0, 0, 0,0);
     color:#a6c100;
+	border: none;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>PyQt-Fluent-Widgets    By：zhiyiYo</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ImLaoBJie_pushButton">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>印品鸿蒙体（非商用）</family>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 0,0);
+    color:#a6c100;
+	border: none;
 }
 
 </string>
      </property>
      <property name="text">
       <string>ZZZSoundTrigger    By：ImLaoBJie</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="ImLaoBJie_pushButton_2">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>印品鸿蒙体（非商用）</family>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: rgba(0, 0, 0,0);
+    color:#AA0000;
+	border: none;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>本项目完全开源免费！如果你是买来的，可凭此截图退款！</string>
      </property>
     </widget>
    </item>

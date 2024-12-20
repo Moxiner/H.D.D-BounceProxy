@@ -3,9 +3,9 @@ chcp 65001
 
 setlocal enabledelayedexpansion
 cd /d "%~dp0"
-python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip
+python -m pip install -i https://mirrors.aliyun.com/pypi/simple/ --upgrade pip
 
-pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simples
+pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 echo ================================
 echo  Requirements install Done.
 echo         环境安装完成

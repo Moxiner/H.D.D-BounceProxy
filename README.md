@@ -37,10 +37,10 @@ cd H.D.D-BounceProxy
 
 // 手动安装
 // 1. 使用清华源更新 pip
-python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple --upgrade pip
+python -m pip install -i https://mirrors.aliyun.com/pypi/simple/ --upgrade pip
 
 // 2. 使用 pip 清华源安装模块
-pip install -r requirements.txt -i  https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+pip install -r requirements.txt -i  https://mirrors.aliyun.com/pypi/simple/
 
 // 3. 安装字体
 copy ".\Font\black.ttf" "%windir%\Fonts" > nul
@@ -48,11 +48,12 @@ copy ".\Font\black.ttf" "%windir%\Fonts" > nul
 rundll32.exe /s %windir%\System32\spool\DRIVERS\Color\fontcache.dll
 ```
 
-* 启动
+* 启动（以管理员方式启动）
 ```
 ./run.bat    
 ```
 
+* 在游戏中将攻击的辅助键位设置为 `Y`
 # 致谢
 
 ## 引用开源仓库
@@ -67,8 +68,9 @@ GUI 提供: [H.D.D-System](https://github.com/PPicku/H.D.D-System) - By: [PPicku
 
 ## 赞助者名单
 
-本项目的发展离不开您的支持，谢谢你们的支持！
-| 赞助者 | 赞助留言 | 
-| :------------: | :------------- |
-| 烦烦 |   |
-| 波奇的摇滚吉他 | 做大做强 |
+本项目的发展离不开您的支持，谢谢你们的支持！（此捐赠名单按捐赠时间排序）
+|序号| 捐赠者 | 捐赠留言 | 
+|:--:| :--: | :-- |
+|1| 烦烦 | 该用户很神秘，没有留言 |
+|2| 波奇的摇滚吉他 | 做大做强 |
+|3| 东汉****主任 | 该用户很神秘，没有留言 |

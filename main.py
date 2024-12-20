@@ -75,6 +75,7 @@ class MainWindow(QWidget):
         self.initStart()
 
     def initUI(self):
+        self.initconfig()
 
         self.main_layout = QVBoxLayout(self)
         # 创建 QStackedWidget
@@ -110,27 +111,31 @@ class MainWindow(QWidget):
         )
 
     def start(self):
-        initconfig()
+        self.initconfig()
         if not status.is_set():
             status.set()  # 设置事件，通知线程开始运行
-            logger.info("H.D.D代理正在启动...")
-            info.play_sound("./Sound/Start.wav")
+            logger.info("H.D.D代理已启动...")
+            info.play_sound("./Sound/Start.wav", int(outtone))
             first = False
             self.home.ui.start_pushButton.hide()
             self.home.ui.stop_pushButton.show()
 
     def stop(self):
         """当按下F9时，停止线程"""
+        self.initconfig()
         status.clear()  # 清除事件，通知线程暂停
-        logger.info("H.D.D代理正在停止...")
-        info.play_sound("./Sound/Stop.wav")
+        logger.info("H.D.D代理已停止...")
+
+        info.play_sound("./Sound/Stop.wav", int(outtone))
 
         self.home.ui.start_pushButton.show()
         self.home.ui.stop_pushButton.hide()
 
     def closeEvent(self, event):
         status.clear()  # 清除事件，通知线程暂停
-        logger.info("H.D.D代理正在停止...")
+        logger.info("H.D.D代理已停止...")
+        logger.info("H.D.D 请手动关闭终端")
+
         stop.set()
 
     def initStart(self):
@@ -236,6 +241,21 @@ class MainWindow(QWidget):
         pixmap = QPixmap("./Image/bg.png")
         painter.drawPixmap(self.rect(), pixmap)
 
+    def initconfig(self):
+        global evasion
+        global bounce
+        global determinemode
+        global operationmode
+        global outtone
+        global intone
+        config = info.read_config("./config.ini")
+        evasion = config["setting"]["evasion"]
+        bounce = config["setting"]["bounce"]
+        determinemode = config["setting"]["determinemode"]
+        operationmode = config["setting"]["operationmode"]
+        outtone = config["setting"]["outtone"]
+        intone = config["setting"]["intone"]
+
 
 if __name__ == "__main__":
 
@@ -244,6 +264,7 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     logger.info("H.D.D 代理初始化完成...")
+
     keyboard.on_press_key("f8", lambda _: window.start())
     keyboard.on_press_key("f9", lambda _: window.stop())
     # keyboard.wait()  # 等待键盘事件，使程序持续运行

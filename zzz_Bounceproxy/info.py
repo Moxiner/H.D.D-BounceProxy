@@ -2,10 +2,11 @@ import pygame
 import time
 
 
-def play_sound(file_path):
-    pygame.mixer.init()
-    pygame.mixer.music.load(file_path)
-    pygame.mixer.music.play()
+def play_sound(file_path, model):
+    if not model:
+        pygame.mixer.init()
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.play()
 
 
 import os
@@ -26,10 +27,10 @@ def read_config(file_path):
             config["setting"] = {
                 "evasion": "0",
                 "bounce": "0",
-                "determineMode": "true",
-                "operationMode": "auto",
-                "outTone": "true",
-                "inTone": "true",
+                "determineMode": "0",
+                "operationMode": "0",
+                "outTone": "0",
+                "inTone": "0",
             }
             # 写入配置文件
             config.write(configfile)
@@ -55,5 +56,3 @@ def modify_config(file_path, filecofig, fileitem, filevalue):
     # 保存修改后的文件
     with open(file_path, "w") as configfile:
         config.write(configfile)
-
-

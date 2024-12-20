@@ -45,15 +45,22 @@ def initconfig():
 
 
 def startlog():
+    initconfig()
     os.system("cls")
     art.tprint("H.D.D System")
     print("/" * 50)
-    print("H.D.D代理已接入")
+    logger.info("本项目完全开源免费")
+    logger.info("如果你是买来的，可凭此截图退款！")
+    logger.info("拒绝退款的，请举报该商家！")
+    logger.info("必要时请使用法律武器维护自己的合法权益！")
+    logger.info("本项目严禁任何人打着幌子倒卖或收取知识费，服务费，安装费等！")
+    print("/" * 50)
+    logger.info("H.D.D代理已接入")
     print("/" * 50)
     time.sleep(1)
     logger.info("H.D.D 代理初始化...")
     if first:
-        info.play_sound("./Sound/Info.wav")
+        info.play_sound("./Sound/Info.wav", int(outtone))
 
 
 def my_task():
@@ -90,17 +97,19 @@ def print_task():
             evasion_list = ["极限弹反", "极限支援", "极限闪避"]
             bounce_list = ["同轴闪避", "极限双闪", "极限闪避"]
             operationmode_list = ["自动", "键鼠", "手柄"]
+            operationmode_list = ["自动", "键鼠", "手柄"]
+            operationmode_list = ["自动", "键鼠", "手柄"]
+            outtone_list = ["开启", "关闭"]
+            intone_list = ["开启", "关闭"]
             logger.info("=" * 20)
             logger.info(f"弹反  {evasion_list[int(evasion)]}")
             logger.info(f"闪避  {bounce_list[int(bounce)]}")
             logger.info(f"操作模式  {operationmode_list[int(operationmode)]}")
-
+            logger.info(f"局外提示语音  {outtone_list[int(outtone)]}")
+            logger.info(f"局内提示语音  {intone_list[int(intone)]}")
             time.sleep(3)
         else:
-            logger.info("H.D.D 代理已停止")
             status.wait()  # 等待事件被设置
-        if stop.is_set():
-            logger.info("H.D.D 代理已退出")
 
 
 startlog()

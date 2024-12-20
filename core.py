@@ -46,7 +46,6 @@ def initconfig():
 
 def startlog():
     initconfig()
-    os.system("cls")
     art.tprint("H.D.D System")
     print("/" * 50)
     logger.critical("本项目完全开源免费")

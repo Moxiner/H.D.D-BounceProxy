@@ -114,7 +114,7 @@ class MainWindow(QWidget):
         self.initconfig()
         if not status.is_set():
             status.set()  # 设置事件，通知线程开始运行
-            logger.info("H.D.D代理已启动...")
+            logger.success("H.D.D代理已启动...")
             info.play_sound("./Sound/Start.wav", int(outtone))
             first = False
             self.home.ui.start_pushButton.hide()
@@ -124,7 +124,7 @@ class MainWindow(QWidget):
         """当按下F9时，停止线程"""
         self.initconfig()
         status.clear()  # 清除事件，通知线程暂停
-        logger.info("H.D.D代理已停止...")
+        logger.success("H.D.D代理已停止...")
 
         info.play_sound("./Sound/Stop.wav", int(outtone))
 
@@ -133,7 +133,7 @@ class MainWindow(QWidget):
 
     def closeEvent(self, event):
         status.clear()  # 清除事件，通知线程暂停
-        logger.info("H.D.D代理已停止...")
+        logger.success("H.D.D代理已停止...")
         logger.info("H.D.D 请手动关闭终端")
 
         stop.set()
@@ -172,6 +172,9 @@ class MainWindow(QWidget):
         )
         self.about.ui.PPicku__pushButton.clicked.connect(
             lambda: webbrowser.open("https://github.com/PPicku/H.D.D-System")
+        )
+        self.about.ui.zhiyiYo__pushButton.clicked.connect(
+            lambda: webbrowser.open("https://github.com/zhiyiYo/PyQt-Fluent-Widgets")
         )
         self.about.ui.author_pushButton.clicked.connect(
             lambda: webbrowser.open("https://github.com/Moxiner")

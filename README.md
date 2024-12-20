@@ -4,7 +4,7 @@
 ![Liscense](https://img.shields.io/github/license/Moxiner/H.D.D-BounceProxy)
 ![Downloads](https://img.shields.io/github/downloads/Moxiner/H.D.D-BounceProxy/total)
 ![Release](https://img.shields.io/github/v/release/Moxiner/H.D.D-BounceProxy)
-![Support-Python-Verson](https://img.shields.io/badge/Support--Verson-3.11.6-yellow)
+![Support-Python-Verson](https://img.shields.io/badge/Support--Python--Verson-3.11.6-yellow)
 ![Support-Game——Version](https://img.shields.io/badge/Support--Game--version-Nested-red)
 
 

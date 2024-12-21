@@ -1,11 +1,27 @@
-# H.D.D-BounceProxy
- 绝区零自动弹反系统
- 
+<p align="center">
+  <img width="18%" align="center" src="./Image/Icon.ico" alt="logo">
+</p>
+  <h1 align="center">
+  H.D.D-BounceProxy
+</h1>
+<p align="center">
+  绝区零自动弹反系统
+</p>
+
+
+<div align="center">
+
 ![Liscense](https://img.shields.io/github/license/Moxiner/H.D.D-BounceProxy)
 ![Downloads](https://img.shields.io/github/downloads/Moxiner/H.D.D-BounceProxy/total)
 ![Release](https://img.shields.io/github/v/release/Moxiner/H.D.D-BounceProxy)
 ![Support-Python-Verson](https://img.shields.io/badge/Support--Python--Verson-3.11.6-yellow)
 ![Support-Game——Version](https://img.shields.io/badge/Support--Game--version-Nested-red)
+
+
+</div>
+# H.D.D-BounceProxy
+ 绝区零自动弹反系统
+ 
 
 
 ![img](./Docs/title.png)

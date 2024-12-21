@@ -5,7 +5,7 @@
   H.D.D-BounceProxy
 </h1>
 <p align="center">
-  绝区零自动弹反系统
+  绝区零自动弹反系统 | 多种检测方式 | 多种操作方式 | 多种弹反招式
 </p>
 
 
@@ -19,8 +19,7 @@
 
 
 </div>
-# H.D.D-BounceProxy
- 绝区零自动弹反系统
+
  
 
 

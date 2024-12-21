@@ -10,6 +10,7 @@ PyAutoGUI
 pydirectinput_rgx
 pygame
 pyserial
+PySide6
 PyQt5
 pywin32
 rich

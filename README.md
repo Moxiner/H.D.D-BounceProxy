@@ -32,7 +32,7 @@
 
 ## 使用
 
-#### 下载：[Python 3.11.6](https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe)
+#### 下载：[Python 3.11.6](https://mirrors.aliyun.com/python-release/windows/python-3.11.6-amd64.exe)
 > [!IMPORTANT]
 > 请务必使用 Python 3.11.6，其他版本安装模块可能会有问题
 

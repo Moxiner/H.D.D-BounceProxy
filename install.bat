@@ -24,8 +24,16 @@ REM 调用环境配置脚本
 set "APPPATH=%~dp0"
 set "CURRENT_DIR=%APPPATH%"
 
+REM 获取Python版本
+python --version
+if %errorlevel% neq 0 (
+    echo [ERR] 获取 Python 版本失败。
+    pause
+    exit /b 1
+)
+for /f "tokens=*" %%i in ('python --version 2^>^&1') do set "PYTHON_VERSION=%%i"
 REM 打印信息
-echo [PASS] PYTHON: %PYTHON%
+echo [PASS] Python 版本: %PYTHON_VERSION%
 echo [PASS] APPPATH: %APPPATH%
 echo [PASS] MAINPATH: %MAINPATH%
 
@@ -66,31 +74,7 @@ set timestamp=%hour%.%minute%.%second%
 set "BAT_LOG=%log_dir%\bat_%timestamp%.log"
 set "PYTHON_LOG=%log_dir%\python_%timestamp%.log"
 
-REM 检查并创建日志目录
-if not exist "%log_dir%" (
-    echo [WARN] 日志目录不存在，正在创建... 
-    mkdir "%log_dir%"
-    if %errorlevel% neq 0 (
-        echo [WARN] 创建日志目录失败。
-        pause
-        exit /b 1
-    )
-    echo [PASS] 日志目录创建成功。
-)
 
-REM 删除所有以 'bat_' 开头且以 '.log' 结尾的文件
-for /r "%log_dir%" %%F in (bat_*.log) do (
-    del "%%F"
-    echo [INFO] 删除旧日志文件: %%F
-)
-
-REM 获取Python版本
-python --version
-if %errorlevel% neq 0 (
-    echo [ERR] 获取 Python 版本失败。
-    pause
-    exit /b 1
-)
 
 echo [PASS] Python已安装并配置正确。
 
@@ -137,13 +121,13 @@ echo [PASS] requirements.txt 安装成功。
 echo -------------------------------
 
 REM 安装字体
-set "FONT_FILE_PATH=%APPPATH%\Font\black.ttf"  
-set "SYSTEM_FONTS_DIR=C:\Windows\Fonts"
+set "FONT_FILE_PATH=.\Font\black.ttf"  
+set "SYSTEM_FONTS_DIR=%windir%\Fonts"
 
 echo -------------------------------
 echo 正在安装字体...
 echo -------------------------------
-copy "%FONT_FILE_PATH%" "%SYSTEM_FONTS_DIR%"
+%FONT_FILE_PATH%
 if %errorlevel% neq 0 (
     echo [ERR] 字体安装失败。
     pause
@@ -165,7 +149,7 @@ if "%font_installed%"=="false" (
 echo [PASS] 字体已成功安装并确认。
 
 echo -------------------------------
-echo 1. 请双击 run.bat 以启动H.D.D弹反
+echo 1. 请双击 run.bat 以启动 H.D.D 弹反
 echo 2. 请在游戏中将攻击的辅助键位设置为 Y
 echo -------------------------------
 

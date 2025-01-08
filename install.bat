@@ -142,7 +142,7 @@ for /f "delims=" %%F in ('dir "%SYSTEM_FONTS_DIR%\black.ttf" /b 2^>nul') do (
     set "font_installed=true"
 )
 if "%font_installed%"=="false" (
-    echo [ERR] 字体未正确安装。
+    echo [ERR] 字体未正确安装
     pause
     exit /b 1
 )

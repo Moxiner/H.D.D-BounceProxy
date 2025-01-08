@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+# text=auto
+# 强制所有 .bat 文件保持 CRLF 换行符
+*.bat text eol=crlf
